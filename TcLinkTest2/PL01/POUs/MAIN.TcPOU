@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{fec871af-3dc2-45ce-a328-c071da846fb1}" SpecialFunc="None">
+    <Declaration><![CDATA[
+PROGRAM MAIN
+VAR
+	bOut1, bOut2 AT %Q* : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+bOut1 := NOT bOut1;
+bOut2 := NOT bOut1;
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
